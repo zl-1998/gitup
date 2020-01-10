@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>index</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap min100 bgf0">
+    <section class="main">
+        <div class="m-list-flex plr15 ptb15 mb10 bgf ">
+            <span class="col3 fs13">头像</span>
+            <div class="m-cell-bd tr flex-right df" style="display: flex">
+                <div class="pic-view person-head mr5" style="margin: 0">
+                    <img src="images/sleep-head.png" alt="" class="imgm br50">
+                </div>
+            </div>
+            <img src="images/person-arrow.png" alt="" class="person-arrow ml15">
+        </div>
+        <div class="m-list-flex flex-bet bgf fs13 plr15  bd">
+            <span class="col3">联系电话</span>
+            <div class="m-cell-bd col6">
+                <input type="tel" class="form-unify input-person tr" value="12345678900" disabled>
+            </div>
+            <img src="images/person-arrow.png" alt="" class="person-arrow ml15" >
+        </div>
+        <div class="m-list-flex flex-bet bgf fs13 plr15 bd">
+            <span class="col3">用户昵称</span>
+            <div class="m-cell-bd col6">
+                <input type="text" class="form-unify input-person tr" value="用户某某某" disabled>
+            </div>
+            <img src="images/person-arrow.png" alt="" class="person-arrow ml15" >
+        </div>
+        <div class="m-list-flex flex-bet bgf fs13 plr15 bd">
+            <span class="col3">性别</span>
+            <div class="m-cell-bd col6 clearfix ">
+                <select name="" id="" class="input-person fr " style="border: 0;direction: rtl;width: 80px;">
+                    <option value="">男</option>
+                </select>
+            </div>
+            <img src="images/person-arrow.png" alt="" class="person-arrow ml15" >
+        </div>
+        <div class="m-list-flex flex-bet bgf fs13 plr15 bd">
+            <span class="col3">年龄</span>
+            <div class="m-cell-bd col6 clearfix ">
+                <!--<select name="" id="old" class="input-person fr " style="border: 0;direction: rtl;width: 80px;">-->
+                <!--</select>-->
+                <input type="text" class="form-unify input-person tr" value="" placeholder="请输入" >
+            </div>
+            <img src="images/person-arrow.png" alt="" class="person-arrow ml15" >
+        </div>
+        <a href="javascript:;" class="m-list-flex flex-bet bgf fs13 plr15 bd">
+            <span class="col3">收货地址</span>
+            <div class="m-cell-bd col6 pl20">
+                <input type="text" class="form-unify input-person tr" value="上海市-浦东新区-世纪大道..." disabled>
+            </div>
+            <img src="images/person-arrow.png" alt="" class="person-arrow ml15" >
+        </a>
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+
+</body>
+<script>
+    $(function(){
+
+        // select默认选中项颜色
+        var unSelected = "#666";
+        var selected = "#333";
+        $("select").css("color", unSelected);
+        $("option").css("color", selected);
+        $("select").change(function () {
+            var selItem = $(this).val();
+            if (selItem == $(this).find('option:first').val()) {
+                $(this).css("color", unSelected);
+            } else {
+                $(this).css("color", selected);
+            }
+        });
+
+
+
+    });
+    var select = document.getElementById("old");
+    //    var select1 = document.getElementsByClassName("old");
+    //    var select = $("#old");
+    //    console.log(select)
+    for(var i=1;i<=100;i++){
+        var opt = document.createElement("option");
+        opt.value=i;
+        opt.innerHTML=i;
+        select.appendChild(opt)
+
+    }
+    var select1 = document.getElementById("old1");
+    for(var a=1;a<=100;a++){
+        var opt1 = document.createElement("option");
+        opt1.value=a;
+        opt1.innerHTML=a;
+        select1.appendChild(opt1)
+
+        // 获取视图原始高度
+        var screenHeight = document.body.offsetHeight;
+        // 为window绑定resize事件
+        window.onresize = function () {
+            var nowHeight = document.body.offsetHeight;
+            if (nowHeight < screenHeight) {
+                // 将底部弹起的按钮隐藏（可使用给按钮添加相应类）
+                $('').hide();
+            } else {
+                // 将按钮正常显示（可使用给按钮移除相应类）
+                $('').show();
+            }
+        };
+    }
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>index</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap min100 bgf">
+
+    <section class="main">
+        <div class="plr15">
+            <div class="fs14 tit-pt fd"><span class="text-blue"><span class="choose-tit">选择题</span></span></div>
+            <p class="fs16 pt5 pb10 col3">1.亲! 您的睡眠质量怎么样呢</p>
+            <label for="buy1" class="buy2 " >
+                <input type="radio" class="weui-check" name="check-way" id="buy1">
+                <div class="check-main single-line pb15 fs-15 col6 m-list-flex">很好</div>
+            </label>
+            <label for="buy2" class="buy2">
+                <input type="radio" class="weui-check" name="check-way" id="buy2">
+                <div class="check-main single-line pb15 col6 fs-15 m-list-flex">一般</div>
+            </label>
+            <label for="buy3" class="buy2">
+                <input type="radio" class="weui-check" name="check-way" id="buy3">
+                <div class="check-main single-line pb15 col6 fs-15 m-list-flex">不好</div>
+            </label>
+            <label for="buy4" class="buy2">
+                <input type="radio" class="weui-check" name="check-way" id="buy4">
+                <div class="check-main single-line pb15 col6 fs-15 m-list-flex">很不好</div>
+            </label>
+            <p class="fs16 pt5 pb10 col3">2.亲! 您今天主要做了什么事情呢</p>
+            <label for="buy5" class="buy2 " >
+                <input type="radio" class="weui-check" name="check-way1" id="buy5">
+                <div class="check-main single-line pb15 fs-15 col6 m-list-flex">很好</div>
+            </label>
+            <label for="buy6" class="buy2">
+                <input type="radio" class="weui-check" name="check-way1" id="buy6">
+                <div class="check-main single-line pb15 col6 fs-15 m-list-flex">一般</div>
+            </label>
+            <label for="buy7" class="buy2">
+                <input type="radio" class="weui-check" name="check-way1" id="buy7">
+                <div class="check-main single-line pb15 col6 fs-15 m-list-flex">不好</div>
+            </label>
+            <label for="buy8" class="buy2">
+                <input type="radio" class="weui-check" name="check-way1" id="buy8">
+                <div class="check-main single-line pb15 col6 fs-15 m-list-flex">很不好</div>
+            </label>
+
+            <div class="fs14 tit-pt fd"><span class="text-blue"><span class="choose-tit">开放题</span></span></div>
+            <p class="col3 fs16">亲! 您今天心情怎么样呢</p>
+            <textarea class="reply-area fs12 mt15 mb15" placeholder="请谈谈您的看法吧" rows="10"></textarea>
+            <p class="col3 fs16 ">亲! 您今天主要干了什么呢</p>
+            <textarea class="reply-area fs12 mt15 mb15" placeholder="请谈谈您的看法吧" rows="10"></textarea>
+        </div>
+        <!--更多设置-->
+        <div class="plr15 pt20 pr btn-footer " style="padding-bottom: 40px;">
+            <!--发布成功提示-->
+            <!--<span class="succ-window">发布成功，睡银+20</span>-->
+            <button class="btn-blue btn-shadow">提交</button>
+        </div>
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+
+</body>
+<script>
+    $(".date-time").datetimePicker({
+        times: function () {
+            return [
+
+            ];
+        },
+        value: '2012-12-12 ',
+        onChange: function (picker, values, displayValues) {
+            console.log(values);
+        }
+    });
+//    $('.btn-blue').click(function () {
+//        $('.succ-window').show();
+//    });
+    // 获取视图原始高度
+    var screenHeight = document.body.offsetHeight;
+    // 为window绑定resize事件
+    window.onresize = function () {
+        var nowHeight = document.body.offsetHeight;
+        if (nowHeight < screenHeight) {
+            // 将底部弹起的按钮隐藏（可使用给按钮添加相应类）
+            $('.btn-footer').hide();
+        } else {
+            // 将按钮正常显示（可使用给按钮移除相应类）
+            $('.btn-footer').show();
+        }
+    };
+</script>
+</html>

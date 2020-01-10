@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>购物车</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <script src="js/iphoneX.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap bgf min100">
+    <section class="main" style="">
+        <ul class="butcartlist">
+            <li class="m-list-flex shopcart_buy">
+                <label for="buy1" class="buy mr10 ">
+                    <input type="checkbox" class="weui-check" name="check-way" id="buy1">
+                    <div class="check-main shopcart_buy">
+                    </div>
+                </label>
+                <div class="pic-view mr20"><img src="images/swiper-img2.png" alt="" class="imgm"/></div>
+                <div class="m-cell-bd">
+                    <h4 class="single-line fs14 col0 mb5">慢波睡眠精品枕头 助睡眠</h4>
+                    <p class="fs11 col9 ">规格：100粒</p>
+                    <div class="fs12  mt15 clearfix">
+                        <span class="fl">¥<span class="fs16">799</span></span>
+                        <div class="fr fs14 m-stock1 mt5">
+                            <i class="plus">+</i>
+                            <input name="" type="text" class="value" value="1" disabled>
+                            <i class="minus">-</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_right">
+                    <div class=" table">
+                        <a href="javascript:;" class="table-cell">删除</a>
+                    </div>
+                </div>
+            </li>
+            <li class="m-list-flex shopcart_buy">
+                <label for="buy2" class="buy mr10 ">
+                    <input type="checkbox" class="weui-check" name="check-way" id="buy2">
+                    <div class="check-main"></div>
+                </label>
+                <div class="pic-view mr20"><img src="images/swiper-img2.png" alt="" class="imgm"/></div>
+                <div class="m-cell-bd">
+                    <h4 class="single-line fs14 col0 mb5">慢波睡眠精品枕头 助睡眠</h4>
+                    <p class="fs11 col9 ">规格：100粒</p>
+                    <div class="fs12  mt15">
+                        <span class="fl">¥<span class="fs16">799</span></span>
+                        <div class="fr fs14 m-stock1 mt5">
+                            <i class="plus">+</i>
+                            <input name="" type="text" class="value" value="1" disabled>
+                            <i class="minus">-</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_right">
+                    <div class=" table">
+                        <a href="javascript:;" class="table-cell">删除</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="shopping1 cart-settle ">
+            <div class="m-list-flex count-footer bgf">
+                <div class=" pl5 footer-span checkAll">
+                    <label  class="all-buy mr5 ml10 buysy"  style="display: inline-block">
+                        <input type="checkbox" class="weui-check" name="check-way" >
+                        <div class="check-main "> <span class="fs13 buy-all">全选</span></div>
+                    </label>
+                </div>
+                <div class="m-cell-bd footer-price m-list-flex" style="justify-content: flex-end;padding: 4px 0">
+                    <span class="fr"><em>￥</em>790.00</span>
+                    <button class="fr">去结算</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- main end -->
+
+</section>
+
+</body>
+<script>
+    $(function() {
+        for (i = 0; i < $(".butcartlist").children().length; i++) {
+            if ($(".butcartlist li").eq(i).find(".value").val() == "1") {
+//                $(".butcartlist li").eq(i).find(".value").next().addClass("del");
+                $(".butcartlist li").eq(i).find(".value").next().text("-")
+            }
+        }
+
+//
+//        $(".buy1").click(function () {
+//            if ($(this).children("input").is(":checked")) {
+//                $(this).children("input").removeAttr("checked", true)
+//            } else {
+//                $(this).children("input").prop("checked", true)
+//            }
+//            return false
+//        });
+        $(document).on("change", ".buy-all .weui-check", function () {
+            $(document).on("click", ".m-stock1 .plus", function () {
+                $this = $(this);
+                v = parseFloat($this.next().val());
+                $this.next().attr("value", v + 1);
+                $this.next().next().removeClass("del");
+                $this.next().next().text("-");
+            });
+            $(document).on("click", ".m-stock1 .minus", function () {
+                $this = $(this);
+                v = parseInt($this.prev().val());
+                if (v > 1) {
+                    $this.prev().attr("value", v - 1);
+                    if (v <= 2) {
+                        $this.addClass("del");
+                        $this.text("-")
+                    }
+                }
+            });
+
+            if ($(this).is(":checked")) {
+                // $('.buy-all').css('color','#ff0000');
+                $(".shopcart_buy .weui-check").prop({checked: true});
+            } else {
+                // $('.allcheck_mr').css('color','#999');
+                $(".shopcart_buy .weui-check:checked").prop({checked: false});
+            }
+        });
+
+        $(".shopcart_buy .weui-check").change(function () {
+            console.log($(".buyinput .weui-check").not("input:checked").size())
+            if ($(".shopcart_buy .weui-check").not("input:checked").size() <= 0) {
+                //如果其它的复选框全部被勾选了，那么全选勾中
+                $('.buysy .weui-check').prop({checked: true});
+                // $('.allcheck_mr').css('color','#ff0000');
+            } else {
+                $('.buysy .weui-check').prop({checked: false});
+                // $('.allcheck_mr').css('color','#999');
+            }
+        });
+        $(document).on("change", ".cart-settle .weui-check", function () {
+            if ($(this).is(":checked")) {
+                $(".butcartlist .weui-check").prop({checked: true});
+            } else {
+                $(".butcartlist .weui-check:checked").prop({checked: false});
+            }
+        });
+        $(document).on('touchstart', 'body', function(e) {
+            // e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX,
+                startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $(document).on('touchend', '.butcartlist li', function(e) {
+            // e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX,
+                moveEndY = e.originalEvent.changedTouches[0].pageY,
+                X = moveEndX - startX,
+                Y = moveEndY - startY;
+            //左滑
+            var _this = $(e.target);
+            if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+                parent = _this.parents('.butcartlist li');
+                parent.addClass('trans');
+            }else if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
+                parent = _this.parents('.butcartlist li');
+                parent.removeClass('trans');
+            }
+        });
+
+
+        // 获取视图原始高度
+        var screenHeight = document.body.offsetHeight;
+        // 为window绑定resize事件
+        window.onresize = function () {
+            var nowHeight = document.body.offsetHeight;
+            if (nowHeight < screenHeight) {
+                // 将底部弹起的按钮隐藏（可使用给按钮添加相应类）
+                $('.cart-settle').hide();
+            } else {
+                // 将按钮正常显示（可使用给按钮移除相应类）
+                $('.cart-settle ').show();
+            }
+        };
+    })
+</script>
+</html>

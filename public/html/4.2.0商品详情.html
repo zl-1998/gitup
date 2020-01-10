@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>index</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap min100">
+
+    <div class="foot_fixed bgf">
+        <div class="m-list-flex " style="padding-bottom: 3px;padding-top: 3px; box-shadow: 0 -1px 20px 0 rgba(139, 137, 137, 0.18);">
+            <div class="m-cell-bd pt5 pr10">
+                <div class="table ">
+                    <a class="things-sign table-cell tc">
+                        <img src="images/index.png" alt="" class="things-icon">
+                        <p class="col9 fs11">首页</p>
+                    </a>
+                    <a class="things-sign table-cell tc ">
+                        <span class="pr">
+                            <img src="images/gwc.png" alt="" class="things-icon" style="position: relative;left: -2px">
+                            <em class="cirle">2</em>
+                        </span>
+                        <p class="col9 fs11" style="position: relative;
+    left: -1px;">购物车</p>
+                    </a>
+                </div>
+            </div>
+            <a href="" class=" gwc">加入购物车</a>
+            <a href="" class="mr10 shopping">立即购买</a>
+        </div>
+    </div>
+    <!-- 底部悬浮 end -->
+
+    <section class="main" style="padding-bottom: 60px;">
+        <div class="swiper-container banner ">
+            <div class="swiper-wrapper">
+                <a  href="" class="swiper-slide"><img src="images/detail-banner.png"  class="imgm"></a>
+                <a  href="" class="swiper-slide"><img src="images/detail-banner.png"  class="imgm"></a>
+                <a  href="" class="swiper-slide"><img src="images/detail-banner.png"  class="imgm"></a>
+            </div>
+            <div class="swiper-pagination "></div>
+        </div>
+       <div class="plr15 bgf">
+           <p class="multi-line1 fs14 pt10">慢波五星级酒店枕头成人护颈枕正品情侣家用枕
+               芯单人一对拍</p>
+           <div class="m-list-flex pb10 pt5">
+               <p class="fs26">¥109.0</p>
+               <div class="m-cell-bd tc col60" style="padding-top: 2px;">
+                 <del>参考市价：¥600</del>
+               </div>
+               <p class="tr col60">销量：239</p>
+           </div>
+       </div>
+        <div class=" mtb10 bgf plr15 ptb10">
+            <p class="col6 fs13">库存<i class="col3 pl15">137件</i></p>
+            <div class="m-list-flex pt10 fs13">
+                <p class="col6">规格</p>
+                <select name="" id="" class="pl15 bgf detail-select m-cell-bd">
+                    <option value="">请选择 </option>
+                </select>
+                <img src="images/arrow-right.png" alt="" class="arrow-right">
+            </div>
+        </div>
+        <h3 class="tc fs14 bgf detail-title ">商/品/详/情</h3>
+        <img src="images/detail-things_02.png" alt="" class="imgm">
+        <img src="images/detail-things_02.png" alt="" class="imgm">
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+</body>
+<script>
+    $(function(){
+        var swiperWidth = $(".banner").width();
+        swiperHeight = swiperWidth * (380/750);
+        $(".banner").css("height",swiperHeight);
+        $(".banner").swiper({
+            pagination: '.swiper-pagination',
+            loop: true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction : false
+        });
+    });
+    $(function(){
+
+        // select默认选中项颜色
+        var unSelected = "#333";
+        var selected = "#333";
+        $(".detail-select").css("color", unSelected);
+        $("option").css("color", selected);
+        $(".detail-select").change(function () {
+            var selItem = $(this).val();
+            if (selItem == $(this).find('option:first').val()) {
+                $(this).css("color", unSelected);
+            } else {
+                $(this).css("color", selected);
+            }
+        });
+
+
+
+    });
+
+</script>
+</html>

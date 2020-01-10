@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>睡友圈</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <!--<link rel="stylesheet" href="css/foundation-datepicker.css" />-->
+    <!--<link rel="stylesheet" href="css/foundation.min.css" />-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
+    <![endif]-->
+    <style>
+        @font-face {font-family: "iconfont";
+            src: url('/font/iconfont.eot?t=1540805636238'); /* IE9*/
+            src: url('/font/iconfont.eot?t=1540805636238#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAQUAAsAAAAABnwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY83UhaY21hcAAAAYAAAABSAAABfoBG6xBnbHlmAAAB1AAAAEsAAABYEkZi8mhlYWQAAAIgAAAALwAAADYTGS4FaGhlYQAAAlAAAAAcAAAAJAfeA4RobXR4AAACbAAAAAwAAAAMDAAAAGxvY2EAAAJ4AAAACAAAAAgAFgAsbWF4cAAAAoAAAAAfAAAAIAEOABJuYW1lAAACoAAAAUUAAAJtPlT+fXBvc3QAAAPoAAAAKwAAAErz6ds0eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGByepT/LYG7438AQw9zA0AAUZgTJAQDtUAyyeJztkLkNgEAMBMc+Q4Aog4CAYohogaucNg4/lMFKM9KuHBmYgOYcjoFcCJHTV8m9seRubHljsT99DPcd9m5pdc38WdP71zT+VNTnCvQF3b8NuwAAeJwlyrERwCAQA0EJhuArcErmMqCUL02lUYnsH/vCmwWB57TTJwYwglewyUktizkpalsWqs92/DbaHWRB52JafTqdu04WfQH9PxeeAHicY2BkYGAA4hV7W3Pi+W2+MnCzMIDA9T9fWRD0/wcsDMwKQC4HAxNIFABWhQuvAHicY2BkYGBu+N/AEMPCAAJAkpEBFTADAEcJAmwEAAAABAAAAAQAAAAAAAAAABYALHicY2BkYGBgZmBjANEMDExAzAWEDAz/wXwGAAlIASEAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAmZGJkZmRhYEnKzMxryS/VDc5v6BSEJkDJhgYANRvC+UA') format('woff'),
+            url('/font/iconfont.ttf?t=1540805636238') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+            url('/font/iconfont.svg?t=1540805636238#iconfont') format('svg'); /* iOS 4.1- */
+        }
+
+        .iconfont {
+            font-family:"iconfont" !important;
+            font-size:18px;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /*.icon-115rightarrowheads:before { content: "\e668"; }*/
+
+        .icon-111arrowheadright:before { content: "\e668"; }
+
+        /*.icon-116leftarrowheads:before { content: "\e667"; }*/
+
+        .icon-112leftarrowhead:before { content: "\e667"; }
+
+
+
+    </style>
+</head>
+<body>
+<section class="wrap min100">
+
+    <div class="foot_fixed  footer-nav fs12 ">
+        <div class="table" style="padding-top: 7px">
+            <a href="" class="table-cell tc">
+                <i></i>
+                <p>睡眠学院</p>
+            </a>
+            <a href="" class="table-cell tc ">
+                <i></i>
+                <p>睡力铺</p>
+            </a>
+            <a href="" class="table-cell tc active">
+                <i></i>
+                <p>睡友圈</p>
+            </a>
+            <a href="" class="table-cell tc">
+                <i></i>
+                <p>慢波商城</p>
+            </a>
+            <a href="" class="table-cell tc">
+                <i></i>
+                <p>个人中心</p>
+            </a>
+        </div>
+    </div>
+    <!-- 底部悬浮 end -->
+
+    <section class="main">
+      <div class="sleep-bg ">
+        <div class="m-list-flex plr15 pt20">
+            <div class="pic-view sleep-head">
+                <img src="images/sleep-head.png" alt="" class="imgm br50">
+            </div>
+            <div class="m-cell-bd pl20 pt5">
+                <p class="fs-15 cf pb5">陈按成</p>
+                <span class="sign-day fs12 single-line"><img src="images/sign-in.png" alt="" class="sign-in">您已连续签到10天，睡银+10</span>
+            </div>
+        </div>
+          <div class="m-list-flex plr15 flex-bet" style="padding-top: 37px;">
+              <p class="m-list-flex">
+                  <img src="images/sleep-head1.png" alt="" class="br50 sleep-one">
+                  <img src="images/sleep-head1.png" alt="" class="br50 sleep-two">
+                  <img src="images/sleep-head1.png" alt="" class="br50 sleep-three">
+                  <span class="fs12 cf pl10 single-line">70238位用户</span>
+              </p>
+              <p class="fs12 cf single-line">已有18位用户签到</p>
+          </div>
+      </div>
+        <div class="table fs-15 tc mb10 bgf ptb15 bed-nav bd col3">
+            <div class="table-cell active">
+                <span>说梦解梦</span>
+            </div>
+            <div class="table-cell">
+                <span>睡眠论坛</span>
+            </div>
+        </div>
+        <!--tab1-->
+        <div class="friend-list">
+         <a href="" class="m-list-flex ptb10 plr15 flex-bet bgf bb">
+             <p class="col3 m-list-flex fs13"><img src="images/hot-img.png" alt="" class="hot-img mr15">常见问题</p>
+             <img src="images/test-arrow.png" alt="" class="test-arrow">
+         </a>
+        <a href="" class="m-list-flex ptb10 plr15 flex-bet bgf bb">
+            <p class="col3 m-list-flex fs13"><img src="images/hot-img.png" alt="" class="hot-img mr15">慢波商城上新货啦！！</p>
+            <img src="images/test-arrow.png" alt="" class="test-arrow">
+        </a>
+        <div class=" mtb10  bgf">
+            <div class="fs16 tit-pt plr15" style="padding-top: 25px;"><span class="text-blue">
+                <span class="choose-tit" style="top: -16px;">美梦榜</span></span></div>
+            <a href=""  class="m-list-flex pt10 pb15 plr15 flex-bet bgf bb">
+                <p class="col3  fs13">梦见一头九色鹿</p>
+                <img src="images/test-arrow.png" alt="" class="test-arrow">
+            </a>
+            <a href="" class="m-list-flex ptb15 plr15 flex-bet bgf bb">
+                <p class="col3  fs13">梦到天空下花朵</p>
+                <img src="images/test-arrow.png" alt="" class="test-arrow">
+            </a>
+            <a href="" class="m-list-flex ptb15 plr15 flex-bet bgf ">
+                <p class="col3  fs13">一个奇怪的梦</p>
+                <img src="images/test-arrow.png" alt="" class="test-arrow">
+            </a>
+        </div>
+            <ul class=" bgf" >
+                <li class="m-list-flex bb plr15 ptb10">
+                    <div class="pic-view bed-head as">
+                        <img src="images/head.png" alt="" class="imgm">
+                    </div>
+                    <div class="m-cell-bd pl15 ">
+                        <p class="fs12 cob  pt15 clearfix"><i class="fd">路人甲 <em class="pl15">删除</em></i> <span class="col9 fr">2天前</span></p>
+                        <p class="fs14 pt5">梦风雨大作（自己可见）</p>
+                        <p class="fs13 col6 pt5 pb5 bed-height">梦也有梦想的意思。古人相信,做梦总要有原因
+                            的，王符就曾说“夫奇异之梦，多有收而少无为
+                            者矣”认为做梦总有原因可寻</p>
+                        <div class="dream-see clearfix">
+                            <a href="javascript:;" class="three imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img ">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                        </div>
+                        <p class="single-line  m-list-flex col6 flex-bet pt5">
+                            <span class="col9">北京市·朋友家</span>
+                            <span>
+                        <i class="pr20"><img src="images/eyes.png" alt="" class="detail-eyes"> 100</i>
+                        <i class="pr20 good-btn"><img src="images/good.png" alt="" class="detail-good">
+                            <img src="images/good-red.png" alt="" class="good-red" style="display: none"> 16</i>
+                        <i><img src="images/infro.png" alt="" class="detail-infro"> 9</i>
+                          </span>
+                        </p>
+                    </div>
+                </li>
+                <li class="m-list-flex bb plr15 ptb10">
+                    <div class="pic-view bed-head as">
+                        <img src="images/head.png" alt="" class="imgm">
+                    </div>
+                    <div class="m-cell-bd pl15 ">
+                        <p class="fs12 cob  pt15 clearfix"><i class="fd">路人甲 <em class="pl15">删除</em></i> <span class="col9 fr">2天前</span></p>
+                        <p class="fs14 pt5">梦风雨大作（自己可见）</p>
+                        <p class="fs13 col6 pt5 pb5 bed-height">梦也有梦想的意思。古人相信,做梦总要有原因
+                            的，王符就曾说“夫奇异之梦，多有收而少无为
+                            者矣”认为做梦总有原因可寻</p>
+                        <p class="single-line  m-list-flex col6 flex-bet pt5">
+                            <span class="col9">北京市·朋友家</span>
+                            <span>
+                        <i class="pr20"><img src="images/eyes.png" alt="" class="detail-eyes"> 100</i>
+                        <i class="pr20 good-btn"><img src="images/good.png" alt="" class="detail-good">
+                            <img src="images/good-red.png" alt="" class="good-red" style="display: none"> 16</i>
+                        <i><img src="images/infro.png" alt="" class="detail-infro"> 9</i>
+                          </span>
+                        </p>
+                        <div class="pb15 pt10">
+                            <p class="blue-p cob  fs13 tell-pd " style="margin-bottom: 1px;"><span class=""><img src="images/good-blue.png" alt="" class="gooo-blue mr10">鲁路修、路人甲</span><span class="col3">等<em>15</em>人觉得很赞</span></p>
+                            <p class="blue-p cob single-line fs13 reply-pd">鲁路修<span class="col0">：真的吗</span></p>
+                            <p class="blue-p cob single-line fs13 reply-name">鲁路修<i class="col0">回复</i>鲁路修<span class="col0">：是的</span></p>
+                            <p class="blue-p col57 single-line fs13 dream-pd" style="margin-top: 1px;">验证<i class="col3">: 蛮准的</i></p>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="friend-list" style="display: none">
+            <a href="" class="m-list-flex ptb10 plr15 flex-bet bgf bb">
+                <p class="col3 m-list-flex fs13"><img src="images/hot-img.png" alt="" class="hot-img mr15">常见问题</p>
+                <img src="images/test-arrow.png" alt="" class="test-arrow">
+            </a>
+            <a href="" class="m-list-flex ptb10 plr15 flex-bet bgf bb">
+                <p class="col3 m-list-flex fs13"><img src="images/hot-img.png" alt="" class="hot-img mr15">慢波商城上新货啦！！</p>
+                <img src="images/test-arrow.png" alt="" class="test-arrow">
+            </a>
+            <div class=" mtb10  bgf">
+                <div class="fs16 tit-pt plr15" style="padding-top: 25px;"><span class="text-blue">
+                <span class="choose-tit" style="top: -16px;">美梦榜</span></span></div>
+                <a href=""  class="m-list-flex pt10 pb15 plr15 flex-bet bgf bb">
+                    <p class="col3  fs13">梦见一头九色鹿</p>
+                    <img src="images/test-arrow.png" alt="" class="test-arrow">
+                </a>
+                <a href="" class="m-list-flex ptb15 plr15 flex-bet bgf bb">
+                    <p class="col3  fs13">梦到天空下花朵</p>
+                    <img src="images/test-arrow.png" alt="" class="test-arrow">
+                </a>
+                <a href="" class="m-list-flex ptb15 plr15 flex-bet bgf ">
+                    <p class="col3  fs13">一个奇怪的梦</p>
+                    <img src="images/test-arrow.png" alt="" class="test-arrow">
+                </a>
+            </div>
+            <ul class=" bgf" >
+                <li class="m-list-flex bb plr15 ptb10">
+                    <div class="pic-view bed-head as">
+                        <img src="images/head.png" alt="" class="imgm">
+                    </div>
+                    <div class="m-cell-bd pl15 ">
+                        <p class="fs12 cob  pt15 clearfix"><i class="fd">路人甲 <em class="pl15">删除</em></i> <span class="col9 fr">2天前</span></p>
+                        <p class="fs14 pt5">梦风雨大作（自己可见）</p>
+                        <p class="fs13 col6 pt5 pb5 bed-height">梦也有梦想的意思。古人相信,做梦总要有原因
+                            的，王符就曾说“夫奇异之梦，多有收而少无为
+                            者矣”认为做梦总有原因可寻</p>
+                        <div class="dream-see clearfix">
+                            <a href="javascript:;" class="three imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img ">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                        </div>
+                        <p class="single-line  m-list-flex col6 flex-bet pt5">
+                            <span class="col9">北京市·朋友家</span>
+                            <span>
+                        <i class="pr20"><img src="images/eyes.png" alt="" class="detail-eyes"> 100</i>
+                        <i class="pr20 good-btn"><img src="images/good.png" alt="" class="detail-good">
+                            <img src="images/good-red.png" alt="" class="good-red" style="display: none"> 16</i>
+                        <i><img src="images/infro.png" alt="" class="detail-infro"> 9</i>
+                          </span>
+                        </p>
+                    </div>
+                </li>
+                <li class="m-list-flex bb plr15 ptb10">
+                    <div class="pic-view bed-head as">
+                        <img src="images/head.png" alt="" class="imgm">
+                    </div>
+                    <div class="m-cell-bd pl15 ">
+                        <p class="fs12 cob  pt15 clearfix"><i class="fd">路人甲 <em class="pl15">删除</em></i> <span class="col9 fr">2天前</span></p>
+                        <p class="fs14 pt5">梦风雨大作（自己可见）</p>
+                        <p class="fs13 col6 pt5 pb5 bed-height">梦也有梦想的意思。古人相信,做梦总要有原因
+                            的，王符就曾说“夫奇异之梦，多有收而少无为
+                            者矣”认为做梦总有原因可寻</p>
+                        <p class="single-line  m-list-flex col6 flex-bet pt5">
+                            <span class="col9">北京市·朋友家</span>
+                            <span>
+                        <i class="pr20"><img src="images/eyes.png" alt="" class="detail-eyes"> 100</i>
+                        <i class="pr20 good-btn"><img src="images/good.png" alt="" class="detail-good">
+                            <img src="images/good-red.png" alt="" class="good-red" style="display: none"> 16</i>
+                        <i><img src="images/infro.png" alt="" class="detail-infro"> 9</i>
+                          </span>
+                        </p>
+                        <div class="pb15 pt10">
+                            <p class="blue-p cob single-line fs13 tell-pd" style="margin-bottom: 1px;"><img src="images/good-blue.png" alt="" class="gooo-blue mr10">鲁路修、路人甲</p>
+                            <p class="blue-p cob single-line fs13 reply-pd">鲁路修<span class="col0">：真的吗</span></p>
+                            <p class="blue-p cob single-line fs13 reply-name">鲁路修<i class="col0">回复</i>鲁路修<span class="col0">：是的</span></p>
+                            <p class="blue-p col57 single-line fs13 dream-pd" style="margin-top: 1px;">验证<i class="col3">: 蛮准的</i></p>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="right-dream" style="bottom: 78px;">
+                <a href=""><img src="images/posting_03.png" alt="" class="posting"></a>
+            </div>
+        </div>
+
+        <!--签到弹窗-->
+        <div class="zz" style="display: none"></div>
+        <div class="online-bg pr " style="display: none">
+         <span class="day-span"><img src="images/day-close.png" alt="" class="day-close "></span>
+            <p class="fs11 pt15 tc cf">本月您已签到</p>
+            <div class="which-day m-list-flex">
+                <span class="pr10 m-cell-bd tr relative">第</span>
+                <div class="mid"><div class="dy">2</div></div>
+                <span class="pl10 m-cell-bd tl relative">天</span>
+            </div>
+            <div class="br5 buthead relative bgf">
+                <div class="butheadin bgf br3 pr">
+                    <div class="pic-view br50"><img src="images/head.png" alt="" class="imgm"></div>
+                    <h3 class="fs16 col3 tc single-line pb10">用户长安某</h3>
+                    <div id='schedule-box' class="boxshaw">
+
+                    </div>
+                </div>
+            </div>
+            <p class="tc fs-15 cf" style="padding-top: 10px;">连续签到2天，睡银+15</p>
+            <p class="fs11 plr15 cf pt5 tc">本日应卯签，睡银已收妥，来日再见！</p>
+        </div>
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+<!-- jquery-weui插件 -->
+</body>
+<script src="js/schedule.js"></script>
+<script>
+    $(".sign-day").click(function(){
+        $(".zz").css({"display":"block"})
+        $(".online-bg").css({"display":"block"})
+//        $('.boxshaw').show();
+        $('.boxshaw').css({'width':$('.butheadin').width()})
+    })
+//    $('datepicker .dropdown-menu ').css({'width':$('.buthead').width()+7.6})
+
+    $(".bed-nav>div").click(function () {
+        $(".bed-nav>div").removeClass("active");
+        $(this).addClass("active");
+        $(".friend-list").css("display","none");
+        $(".friend-list ").eq($(this).index()).css("display","block");
+    });
+    $('.dream-img').css({'height':$('.dream-img').width()})
+    $('.good-btn').click(function () {
+        if($(this).hasClass('no-good')){
+            $(this).find('.detail-good').show();
+            $(this).find('.good-red').hide();
+            $(this).removeClass('no-good')
+        }else{
+            $(this).find('.detail-good').hide();
+            $(this).find('.good-red').show();
+            $(this).addClass('no-good')
+        }
+    });
+    var mySchedule = new Schedule({
+    el: '#schedule-box',
+    //date: '2018-9-20',
+    clickCb: function (y,m,d) {
+        document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d
+    },
+    nextMonthCb: function (y,m,d) {
+        document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d
+    },
+    nextYeayCb: function (y,m,d) {
+        document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d
+    },
+    prevMonthCb: function (y,m,d) {
+        document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d
+    },
+    prevYearCb: function (y,m,d) {
+        document.querySelector('#h3Ele').innerHTML = '日期：'+y+'-'+m+'-'+d
+    }
+});
+
+</script>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>申请退货</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <style>
+        .multi-upload .upload-close {
+            background: url(images/tui-cha.png);
+            display: block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: -7px;
+            right: -8px;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            border-bottom-left-radius: 0;
+        }
+    </style>
+</head>
+<body>
+<section class="wrap min100 bgf">
+    <div class="foot_fixed" style="bottom: 5px;left: 15px;right: 15px;transform: none;width: auto">
+        <div class=" ptb10 pr btn-footer" >
+            <button class="btn2">提交</button>
+        </div>
+    </div>
+    <section class="main " style="padding-bottom: 65px;">
+        <div class="plr15 bgf">
+        <div class="paid-shop-item m-list-flex mt10" style="padding: 10px 12px;background: #ffffff">
+            <div class="pic-view paid-img1">
+                <img src="images/swiper-img2.png" class="imgm" alt="">
+            </div>
+            <div class="m-cell-bd pl10  as">
+                <div class="paid-shop-item-tit m-list-flex pb15">
+                    <p class="single-line m-cell-bd fs13">悦然精品口服液 </p>
+                </div>
+                <div class="m-list-flex">
+                    <div class="m-cell-bd paid-item-num">
+                        <p class="col6 fs11">x1</p>
+                    </div>
+                    <div class="paid-item-price" style="align-self: flex-start">
+                        <p class="fs-15">￥799</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="mb-bg"></div>
+        <div class="plr15 bgf pt10 pb15">
+            <div class="m-list-flex flex-bet pt25 fs13">
+                <span class="col3">服务类型</span>
+            </div>
+            <label for="buy3" class="buy4 pt15">
+                <input type="checkbox" class="weui-check" name="check-way" id="buy3">
+                <a href="javascript:;" class="check-main only tc br6 fs13  pr">仅退款</a>
+            </label>
+
+        </div>
+       <div class="plr15 bgf ptb10  bt ">
+           <div class="m-list-flex flex-bet pt25 pb10 fs13 " >
+               <span class="col3">提交数量</span>
+           </div>
+           <div class=" fs14 m-stock2 ">
+               <i class="plus1"></i>
+               <input name="" type="text" class="value" value="1" disabled>
+               <i class="minus1"></i>
+           </div>
+       </div>
+        <div class="mb-bg"></div>
+        <div class="plr15 bgf  bb pb15">
+            <p class="col58 fs13 pt15 ">问题描述</p>
+            <textarea class="apply-area fs13 mt15 "  maxlength="200" onkeyup="wordStatic(this);" rows="6" placeholder="200字以内，可最多上传4张照片"></textarea>
+            <ul class="clearfix multi-upload" >
+                <li class="mt10 mr15  br3 upload-img" style="background-image:url(./images/th-img.png);"><a href="javascript:;" class=" upload-close"></a></li>
+                <li class="mt10 mr15  br3 upload-img" style="background-image:url(./images/th-img.png);"><a href="javascript:;" class=" upload-close"></a></li>
+                <li class="mt10  br3 upload-file" style="background-image:url(./images/camera.png);">
+                    <input type="file">
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+
+</body>
+<script>
+    // 购物车物品数量
+    $(document).on("click",".m-stock2 .plus1",function() {
+        $this = $(this);
+        v = parseFloat($this.next().val());
+        $this.next().val(v+1);
+    });
+    $(document).on("click",".m-stock2 .minus1",function() {
+        $this = $(this);
+        v = parseInt($this.prev().val());
+        if(v>1){
+            $this.prev().val(v-1);
+        }
+    });
+    function wordStatic(input) {
+        // 获取要显示已经输入字数文本框对象
+        var content = document.getElementById('num');
+        if (content && input) {
+            // 获取输入框输入内容长度并更新到界面
+            var value = input.value;
+            // 将换行符不计算为单词数
+            value = value.replace(/\n|\r/gi,"");
+            // 更新计数
+            content .innerText = value.length;
+        }
+    }
+</script>
+</html>

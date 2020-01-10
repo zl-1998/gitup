@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>我的优惠券</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap min100 bgf">
+    <section class="main">
+        <div class="table fs-15 tc mb10 bgf ptb15 bed-nav bd col3">
+            <div class="table-cell active">
+                <span>未使用</span>
+            </div>
+            <div class="table-cell">
+                <span>已使用</span>
+            </div>
+            <div class="table-cell">
+                <span>已过期</span>
+            </div>
+        </div>
+        <div class="use-plr pt20 m-list-flex">
+            <div class="use-left pr">
+                <div style="position: absolute;top: 50%;left: 5%;transform: translateY(-50%);margin-top: -10px">
+                    <div class="m-list-flex " >
+                        <span class="yuan"><span>10</span><i>元</i></span>
+                        <span class="full"><em>满199使用</em></span>
+                    </div>
+                    <p class="ticket-time">仅限12月12日使用</p>
+                </div>
+            </div>
+            <div class="use-right get">
+                <span class="cf fs12 ">去使用</span>
+            </div>
+        </div>
+        <div class="use-plr pt20 m-list-flex">
+            <div class="use-left pr">
+                <div style="position: absolute;top: 50%;left: 5%;transform: translateY(-50%);margin-top: -10px">
+                    <div class="m-list-flex " >
+                        <span class="yuan"><span>10</span><i>元</i></span>
+                        <span class="full"><em>满199使用</em></span>
+                    </div>
+                    <p class="ticket-time">仅限12月12日使用</p>
+                </div>
+            </div>
+            <div class="use-right2 get">
+                <span class="cf fs12">已使用</span>
+            </div>
+        </div>
+        <div class="use-plr pt20 m-list-flex">
+            <div class="use-left pr">
+                <div style="position: absolute;top: 50%;left: 5%;transform: translateY(-50%);margin-top: -10px">
+                    <div class="m-list-flex " >
+                        <span class="yuan"><span>10</span><i>元</i></span>
+                        <span class="full"><em>满199使用</em></span>
+                    </div>
+                    <p class="ticket-time">仅限12月12日使用</p>
+                </div>
+            </div>
+            <div class="use-right2 get">
+                <span class="cf fs12">已过期</span>
+            </div>
+        </div>
+        
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+
+</body>
+<script>
+    var coupon = $('.use-left').width();
+    sHeight = coupon * (226/484);
+    $('.use-left').css({'height':sHeight});
+    $('.get').css({'height':sHeight})
+</script>
+</html>

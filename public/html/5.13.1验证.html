@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>发布帖子</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap min100 bgf">
+    <div class="foot_fixed">
+        <div class="plr15 ptb20 pr btn-footer">
+            <!--发布成功提示-->
+            <span class="succ-window">发布成功，睡银+20</span>
+            <button class="btn-blue">提交</button>
+        </div>
+    </div>
+    <section class="main" style="padding-bottom: 80px">
+        <div class="plr15">
+            <div class="fs16 tit-pt "><span class="record-blue"><span class="choose-tit">标题</span></span></div>
+            <input type="text" class="form-unify fs13 m-cell-bd tit-input" placeholder="请输入标题">
+            <div class="fs16 tit-pt "><span class="record-blue"><span class="choose-tit">类型</span></span></div>
+            <div class="m-list-flex fs13 title-line">
+                <input type="text" class="form-unify m-cell-bd " placeholder="请选择" disabled>
+                <select name="" id="" class="fs12 type-select type-choose fd">
+                    <option value="">美梦</option>
+                </select>
+                <img src="images/arrow-right.png" alt="" class="arrow-right mr10">
+            </div>
+            <div class="fs16 tit-pt "><span class="record-blue"><span class="choose-tit">内容</span></span></div>
+            <div class="record-content">
+                <textarea class="record-area fs12" rows="7" placeholder="请谈谈您的梦吧"></textarea>
+                <ul class="clearfix multi-upload" >
+                    <li class="mt10 mr10  br3 upload-img" style="background-image:url(./images/fabu.png);"><a href="javascript:;" class=" upload-close"></a></li>
+                    <li class="mt10 mr10  br3 upload-img" style="background-image:url(./images/fabu.png);"><a href="javascript:;" class=" upload-close"></a></li>
+                    <li class="mt10 mr10  br3 upload-img" style="background-image:url(./images/fabu.png);"><a href="javascript:;" class=" upload-close"></a></li>
+                    <li class="mt10  br3 upload-file" style="background-image:url(./images/file.png);">
+                        <input type="file">
+                    </li>
+                </ul>
+            </div>
+            <div class="fs16 tit-pt "><span class="record-blue"><span class="choose-tit">验证</span></span></div>
+            <textarea class="reply-area fs12" placeholder="梦准不准，说说吧" rows="10"></textarea>
+
+        </div>
+        <p class="ptb10 mt15 more-p plr15">更多设置</p>
+        <div class="m-list-flex plr15 bd fs13 bb">
+            <p class="col3 m-list-flex"><img src="images/own_03.png" alt="" class="mr7 own">日期</p>
+            <input type="text" class="m-cell-bd diary-input date-time tr form-unify" placeholder="默认当天">
+            <img src="images/arrow-right.png" alt="" class="arrow-right ml5">
+        </div>
+        <div class="m-list-flex plr15 bd fs13 ptb14 bb flex-bet">
+            <p class="col3 m-list-flex"><img src="images/place_03.png" alt="" class="mr7 own">睡觉地点</p>
+            <span class="col9 m-list-flex" style=""><input type="text" class="city-width tr home-city" placeholder="上海市">
+                <img src="images/arrow-right.png" alt="" class="arrow-right ml5"></span>
+        </div>
+        <div class="m-list-flex plr15 bd fs13 ptb14 bb flex-bet">
+            <p class="col3 m-list-flex"><img src="images/place_03.png" alt="" class="mr7 own">睡觉位置</p>
+            <div class="m-list-flex">
+                <select name="" id="" class="fs12 type-select col6" style="padding-right: 0">
+                    <option value="">家里</option>
+                </select>
+                <img src="images/arrow-right.png" alt="" class="arrow-right ml5">
+            </div>
+        </div>
+        <div class="m-list-flex plr15 bd fs13 ptb14 bb flex-bet">
+            <p class="col3 m-list-flex"><img src="images/record-share.png" alt="" class="mr7 own">分享至</p>
+            <div class="m-list-flex">
+                <select name="" id="" class="fs12 type-select col6" style="padding-right: 0">
+                    <option value="">朋友圈</option>
+                </select>
+                <img src="images/arrow-right.png" alt="" class="arrow-right ml5">
+            </div>
+        </div>
+        <div class="m-list-flex plr15 bd fs13 ptb14 bb flex-bet">
+            <p class="col3 m-list-flex"><img src="images/own_03.png" alt="" class="mr7 own">何人可见</p>
+            <p class="col9 m-list-flex" style="">
+                <span class="own-all mr15">公开</span>
+                <span class="own-see ">自己可见</span>
+            </p>
+        </div>
+        <!--<div class="plr15 ptb20 pr btn-footer">-->
+        <!--&lt;!&ndash;发布成功提示&ndash;&gt;-->
+        <!--<span class="succ-window">发布成功，睡银+20</span>-->
+        <!--<button class="btn-blue">提交</button>-->
+        <!--</div>-->
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+<script src="weui/js/city-picker.js"></script>
+</body>
+<script>
+    $(function(){
+        // select默认选中项颜色
+        var unSelected = "#333";
+        var selected = "#333";
+        $(".type-choose").css("color", unSelected);
+        $(".type-choose option").css("color", selected);
+        $(".type-choose").change(function () {
+            var selItem = $(this).val();
+            if (selItem == $(this).find('option:first').val()) {
+                $(this).css("color", unSelected);
+            } else {
+                $(this).css("color", selected);
+            }
+        });
+    });
+    //    $(function(){
+    //        // select默认选中项颜色
+    //        var unSelected = "#333";
+    //        var selected = "#333";
+    //        $("select").css("color", unSelected);
+    //        $("option").css("color", selected);
+    //        $("select").change(function () {
+    //            var selItem = $(this).val();
+    //            if (selItem == $(this).find('option:first').val()) {
+    //                $(this).css("color", unSelected);
+    //            } else {
+    //                $(this).css("color", selected);
+    //            }
+    //        });
+    //    });
+    $(".date-time").datetimePicker({
+        times: function () {
+            return [
+
+            ];
+        },
+        value: '2012-12-12 ',
+        onChange: function (picker, values, displayValues) {
+            console.log(values);
+        }
+    });
+    $('.btn-blue').click(function () {
+        $('.succ-window').show();
+    });
+    // 获取视图原始高度
+    var screenHeight = document.body.offsetHeight;
+    // 为window绑定resize事件
+    window.onresize = function () {
+        var nowHeight = document.body.offsetHeight;
+        if (nowHeight < screenHeight) {
+            // 将底部弹起的按钮隐藏（可使用给按钮添加相应类）
+            $('.btn-footer').hide();
+        } else {
+            // 将按钮正常显示（可使用给按钮移除相应类）
+            $('.btn-footer').show();
+        }
+    };
+    $(".home-city").cityPicker({
+        title: "选择目的地",
+        showDistrict: false,
+        onChange: function (picker, values, displayValues) {
+            console.log(values, displayValues);
+        }
+    });
+</script>
+</html>

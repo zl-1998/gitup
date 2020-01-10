@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="renderer" content="webkit">
+    <title>我的梦</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="weui/lib/weui.min.css" />
+    <link rel="stylesheet" href="weui/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="weui/lib/jquery-2.1.4.js"></script>
+    <!--[if lt IE 9 ]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="wrap min100">
+
+    <section class="main">
+        <div class="">
+            <ul class=" about-list" >
+                <li class="m-list-flex mb10 plr15 ptb10 bgf">
+                    <div class=" pt5 as" style="">
+                        <p class="fs14">十月</p>
+                        <p class="col9 fs11 tc">十六</p>
+                    </div>
+                    <div class="m-cell-bd pl15 ">
+                        <p class="fs14 pt5 col3">梦见一头九色鹿</p>
+                        <p class="fs13 col6 pt5 pb10 bed-height">梦也有梦想的意思。古人相信,做梦总要有原因
+                            的，王符就曾说“夫奇异之梦，多有收而少无为
+                            者矣”认为做梦总有原因可寻</p>
+                        <div class="dream-see clearfix">
+                            <a href="javascript:;" class="three imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img ">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                            <a href="javascript:;" class="three  imgopen pr">
+                                <img src="images/dream-img.png" alt="" class="dream-img">
+                            </a>
+                        </div>
+                        <p class="single-line  m-list-flex col6 flex-bet pt5">
+                            <span class="my-alter">修改</span>
+                            <span><i class="pr20"><img src="images/eyes.png" alt="" class="detail-eyes"> 100</i>
+                        <i class="pr20 good-btn"><img src="images/good.png" alt="" class="detail-good">
+                            <img src="images/good-red.png" alt="" class="good-red" style="display: none"> 16</i>
+                        <i><img src="images/infro.png" alt="" class="detail-infro"> 9</i>
+                          </span>
+                        </p>
+                    </div>
+                </li>
+                <li class="m-list-flex mb10 plr15 ptb10 bgf">
+                    <div class=" pt5 as" style="">
+                        <p class="fs14">十月</p>
+                        <p class="col9 fs11 tc">十六</p>
+                    </div>
+                    <div class="m-cell-bd pl15 ">
+                        <p class="fs14 pt5 col3">梦见一头九色鹿</p>
+                        <p class="fs13 col6 pt5 pb10 bed-height">梦也有梦想的意思。古人相信,做梦总要有原因
+                            的，王符就曾说“夫奇异之梦，多有收而少无为
+                            者矣”认为做梦总有原因可寻</p>
+                        <p class="single-line  m-list-flex col6 flex-bet pt5">
+                            <span class="my-alter">修改</span>
+                            <span>
+                                <i class="pr20"><img src="images/eyes.png" alt="" class="detail-eyes"> 100</i>
+                        <i class="pr20 good-btn"><img src="images/good.png" alt="" class="detail-good">
+                            <img src="images/good-red.png" alt="" class="good-red" style="display: none"> 16</i>
+                        <i><img src="images/infro.png" alt="" class="detail-infro"> 9</i>
+                          </span>
+                        </p>
+                        <div class="pb15 pt10">
+                            <p class="blue-p cob single-line fs13 tell-pd" style="margin-bottom: 1px;"><img src="images/good-blue.png" alt="" class="gooo-blue mr10">鲁路修、路人甲</p>
+                            <p class="blue-p cob single-line fs13 reply-pd">鲁路修<span class="col0">：真的吗</span></p>
+                            <p class="blue-p cob single-line fs13 reply-name">鲁路修<i class="col0">回复</i>鲁路修<span class="col0">：是的</span></p>
+                            <p class="blue-p col57 single-line fs13 dream-pd" style="margin-top: 1px;">验证<i class="col3">: 蛮准的</i></p>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <!-- main end -->
+
+</section>
+<!-- wrap end -->
+
+
+
+
+<!-- jquery-weui插件 -->
+<script src="weui/js/jquery-weui.min.js"></script>
+<!-- 通用js -->
+<script src="js/functions.js"></script>
+
+</body>
+<script>
+    $('.dream-img').css({'height':$('.dream-img').width()})
+    $('.good-btn').click(function () {
+        if($(this).hasClass('no-good')){
+            $(this).find('.detail-good').show();
+            $(this).find('.good-red').hide();
+            $(this).removeClass('no-good')
+        }else{
+            $(this).find('.detail-good').hide();
+            $(this).find('.good-red').show();
+            $(this).addClass('no-good')
+        }
+    });
+</script>
+</html>
